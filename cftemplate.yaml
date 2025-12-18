@@ -105,6 +105,7 @@ Resources:
             echo "Hello from Auto Scaling Group" > /var/www/html/index.html
             systemctl enable httpd
             systemctl start httpd
+            
   AutoScalingGroup:
     Type: AWS::AutoScaling::AutoScalingGroup
     Properties:
@@ -117,7 +118,7 @@ Resources:
       LaunchTemplate:
         LaunchTemplateId: !Ref LaunchTemplate
         Version: !GetAtt LaunchTemplate.LatestVersionNumber
-        
+
   CpuScalingPolicy:
     Type: AWS::AutoScaling::ScalingPolicy
     Properties:
