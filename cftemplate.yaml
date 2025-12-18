@@ -85,7 +85,9 @@ Resources:
     Type: AWS::IAM::InstanceProfile
     Properties:
       Roles: [!Ref InstanceRole]
-      
+  
+  
+
 Outputs:
   VpcId:
     Value: !Ref VPC
