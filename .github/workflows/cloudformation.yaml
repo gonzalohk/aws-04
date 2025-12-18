@@ -20,7 +20,6 @@ jobs:
         run: |
           aws cloudformation deploy \
             --template-file cftemplate.yaml \
-            --stack-name gonzalohk1989-session3 \
+            --stack-name gonzalohk1989-session4 \
             --capabilities CAPABILITY_NAMED_IAM \
             --no-fail-on-empty-changeset
-            
