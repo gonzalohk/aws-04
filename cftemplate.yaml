@@ -117,6 +117,7 @@ Resources:
       LaunchTemplate:
         LaunchTemplateId: !Ref LaunchTemplate
         Version: !GetAtt LaunchTemplate.LatestVersionNumber
+        
   CpuScalingPolicy:
     Type: AWS::AutoScaling::ScalingPolicy
     Properties:
