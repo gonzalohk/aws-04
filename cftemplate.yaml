@@ -21,6 +21,7 @@ Resources:
       CidrBlock: 10.0.2.0/24
       AvailabilityZone: !Select [1, !GetAZs ""]
       MapPublicIpOnLaunch: true
+      
   InternetGateway:
     Type: AWS::EC2::InternetGateway
   VpcGatewayAttachment:
@@ -105,7 +106,7 @@ Resources:
             echo "Hello from Auto Scaling Group" > /var/www/html/index.html
             systemctl enable httpd
             systemctl start httpd
-            
+
   AutoScalingGroup:
     Type: AWS::AutoScaling::AutoScalingGroup
     Properties:
