@@ -3,7 +3,6 @@ on:
   push:
     branches: [ "main" ]
 jobs:
-
   deploy:
     runs-on: ubuntu-latest
     permissions:
@@ -21,6 +20,6 @@ jobs:
         run: |
           aws cloudformation deploy \
             --template-file cftemplate.yaml \
-            --stack-name gonzalohk1989-session-4 \
+            --stack-name gonzalohk1989-session-4x \
             --capabilities CAPABILITY_NAMED_IAM \
             --no-fail-on-empty-changeset
